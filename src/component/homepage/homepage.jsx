@@ -26,22 +26,22 @@ function HomePage() {
         const togglePlayPause = () => {
             if (!video) return;
             if (isPaused) {
-                video.play(); 
-                setIsPaused(false); 
+                video.play();
+                setIsPaused(false);
             } else {
-                video.pause(); 
-                setIsPaused(true); 
+                video.pause();
+                setIsPaused(true);
             }
         };
 
         const videoControl = document.getElementById('videoControl');
         videoControl?.addEventListener('click', togglePlayPause);
 
-        
+
         return () => {
             videoControl?.removeEventListener('click', togglePlayPause);
         };
-    }, [isPaused]); 
+    }, [isPaused]);
 
     if (loading) {
         return <div className="loading">Loading...</div>;
