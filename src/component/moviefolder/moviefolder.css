@@ -1,0 +1,81 @@
+.horizontal-folder-scroll {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 60vh;
+    padding: 20px;
+    background-color: #000;;
+    color: white;
+    font-family: Arial, sans-serif;
+    position: relative; /* Allow positioning of the arrow */
+}
+
+.horizontal-folder-scroll h2 {
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+    text-align: left;
+    width: 80%;
+}
+
+.folder-scroll-container {
+    display: flex;
+    gap: 10px;
+    overflow-x: auto;
+    padding-bottom: 10px;
+    justify-content: flex-start; /* Start the scroll from the left */
+    align-items: center;
+    scroll-behavior: smooth; /* Smooth scrolling */
+    max-width: 80%; /* Limit the width of the scroll container */
+    margin-right: 40px; /* Create space for the arrow on the right */
+    -ms-overflow-style: none; /* Hide scrollbar for Internet Explorer */
+    scrollbar-width: none; /* Hide scrollbar for Firefox */
+    padding-left: 10px; /* Add some space on the left to make sure the first image is fully visible */
+}
+
+.folder-scroll-container::-webkit-scrollbar {
+    display: none; /* Hide scrollbar for Chrome, Safari, and Opera */
+}
+
+.folder-card {
+    flex: 0 0 auto;
+    width: 180px; /* Adjusted width for better look */
+    text-align: center;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.folder-card img {
+    width: 100%;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s;
+}
+
+.folder-card img:hover {
+    transform: scale(1.1);
+}
+
+.folder-card p {
+    margin-top: 5px;
+    font-size: 0.9rem;
+}
+
+.scroll-arrow {
+    position: absolute;
+    right: 100px; /* Position the arrow at the right edge */
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 2rem;
+    color: white;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+    padding: 10px;
+}
+
+.scroll-arrow:hover {
+    background-color: rgba(255, 255, 255, 0.3);
+    transform: scale(1.2);
+}

@@ -1,0 +1,236 @@
+/* Header Styling */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #000;
+    color: white;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+.homepage{
+    background-color: #141414;
+    backdrop-filter: blur(10px); /* Glass effect */
+    -webkit-backdrop-filter: blur(10px);
+}
+
+.logo img {
+    height: 40px;
+}
+
+.header-right {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.language-selector {
+    padding: 5px 10px;
+    background: #333;
+    color: white;
+    border: 1px solid #444;
+    border-radius: 8px;
+    font-size: 14px;
+}
+
+.signin-button {
+    padding: 5px 15px;
+    background-color: #f5f1f1;
+    color: rgb(14, 13, 13);
+    border: none;
+    border-radius: 4px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.signin-button:hover {
+    background-color: #f40612;
+}
+
+/* Hero Section Styling */
+/* Hero Section Styling */
+.hero {
+    position: relative;
+    height: 80vh;
+    width: 100%;
+    top: 10px;
+    overflow: hidden;
+    color: white;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #141414;
+    border-bottom-left-radius: 50px;
+    border-bottom-right-radius: 50px;
+    border-top-left-radius: 50px;
+    border-top-right-radius: 50px;
+
+    background: rgba(255, 255, 255, 0.2); /* Semi-transparent background */
+    border-radius: 50px; /* Rounded corners */
+    backdrop-filter: blur(15px); /* Blur effect */
+    -webkit-backdrop-filter: blur(15px); /* Safari support */
+    border: 1px solid rgba(255, 255, 255, 0.2); /* Optional subtle border */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Depth effect */
+    
+    transform: scale(0.95); /* Default size */
+    transform-origin: center;
+    
+}
+
+.hero-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+    border-radius: 50px; /* Rounded corners */
+    overflow: hidden; /* Ensure content stays within the rounded borders */
+}
+
+.hero-content {
+    position: relative;
+    z-index: 1;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+    padding: 10px 20px; /* Padding for responsiveness */
+    max-width: 800px; /* Optional: to limit content width */
+    /* transform: scale(1); 
+    animation: zoomOut 3s infinite alternate;  */
+}
+
+.hero-content h1 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+.hero-content p {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+}
+.video-control {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    padding: 10px 15px;
+    background-color: rgba(0, 0, 0, 0.6);
+    color: white;
+    border: none;
+    border-radius: 50%;
+    font-size: 1.5rem;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    z-index: 2;
+}
+
+.video-control:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.cta-button {
+    padding: 10px 20px;
+    background-color: #e50914;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.cta-button:hover {
+    background-color: #f40612;
+}
+@keyframes rectangleZoomOut {
+    0% {
+        transform: scale(1); 
+    }
+    100% {
+        transform: scale(0.95); 
+    }
+}
+
+
+
+/* Email Section Styling */
+/* Email Section Styling */
+.email-section {
+    background-color: #000; /* Black background */
+    color: white;
+    text-align: center;
+    padding: 40px 20px;
+    font-family: Arial, sans-serif;
+}
+
+.email-section h2 {
+    font-size: 1rem;
+    margin-bottom: 10px;
+}
+
+.email-section p {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+}
+
+/* Align Email and Button Inline */
+.email-form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px; /* Spacing between input and button */
+}
+
+/* Curved Input Field */
+.email-form input {
+    width: 60%;
+    max-width: 400px;
+    padding: 10px;
+    font-size: 1rem;
+    border: 1px solid #444;
+    border-radius: 20px; /* Increased for a more rounded effect */
+    background-color: #333;
+    color: white;
+}
+
+.email-form input::placeholder {
+    color: #aaa;
+}
+
+.email-form input:focus {
+    outline: none;
+    border-color: #e50914;
+}
+
+/* Curved Button */
+.email-form button {
+    padding: 10px 20px;
+    background-color: #e50914;
+    color: white;
+    border: none;
+    border-radius: 20px; /* Increased for a more rounded effect */
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.email-form button:hover {
+    background-color: #f40612;
+}
+.video-container {
+    width: 80%; /* Adjust based on your video size */
+    margin: 0 auto;
+    position: relative;
+    overflow: hidden;
+    clip-path: ellipse(90% 50% at 50% 50%); /* Elliptical curve */
+}
+
+.video-container video {
+    width: 100%;
+    height: auto;
+}
+

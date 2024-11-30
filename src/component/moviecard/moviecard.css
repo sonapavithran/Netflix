@@ -1,0 +1,100 @@
+.horizontal-scroll {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 60vh;
+    padding: 20px;
+    background-color: #000; /* Black background */
+    color: white;
+    font-family: Arial, sans-serif;
+    position: relative;
+}
+
+.horizontal-scroll h2 {
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+    text-align: left;
+    width: 80%;
+}
+
+.scroll-container {
+    display: flex;
+    gap: 10px;
+    overflow-x: auto;
+    padding-bottom: 10px;
+    justify-content: center;
+    align-items: center;
+    scroll-behavior: smooth;
+    max-width: 80%;
+    margin-right: 40px;
+    -ms-overflow-style: none; /* Hide scrollbar for IE */
+    scrollbar-width: none; /* Hide scrollbar for Firefox */
+}
+
+.scroll-container::-webkit-scrollbar {
+    display: none; /* Hide scrollbar for Chrome, Safari, etc. */
+}
+
+.movie-card {
+    flex: 0 0 auto;
+    width: 180px;
+    text-align: center;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    background-color: #1a1a1a; /* Optional dark background for the card */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth hover effects */
+    overflow: hidden; /* Prevent content spill */
+}
+
+.movie-card:hover {
+    transform: scale(1.1); /* Slightly grow the card on hover */
+    box-shadow: 0 8px 16px rgba(255, 255, 255, 0.2); /* Enhanced shadow on hover */
+}
+
+.movie-card img {
+    width: 100%;
+    border-radius: 8px;
+    transition: transform 0.3s ease; /* Smooth image zoom on hover */
+}
+
+.movie-card img:hover {
+    transform: scale(1.05); /* Slightly zoom in the image on hover */
+}
+
+.movie-card p {
+    margin-top: 5px;
+    font-size: 0.9rem;
+    color: white;
+    transition: color 0.3s ease; /* Smooth color transition on hover */
+}
+
+.movie-card:hover p {
+    color: #e50914; /* Netflix red for text on hover */
+}
+
+.scroll-arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 2rem;
+    color: white;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+    padding: 10px;
+}
+
+.scroll-arrow:hover {
+    background-color: rgba(255, 255, 255, 0.3);
+    transform: scale(1.2);
+}
+
+.scroll-arrow:first-child {
+    left: 110px; /* Left arrow */
+}
+
+.scroll-arrow:last-child {
+    right: 110px; /* Right arrow */
+}

@@ -1,0 +1,22 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #141414;
+  color: white;
+}
+
+.App {
+  text-align: center;
+}
+.app-container {
+  display: flex; /* Use flexbox for horizontal alignment */
+  flex-wrap: wrap; /* Allow wrapping if there’s not enough space */
+  gap: 20px; /* Add spacing between components */
+  justify-content: center; /* Center both components horizontally */
+  align-items: flex-start; /* Align items to the top */
+  padding: 20px;
+  background-color: #141414; /* Match background colors */
+  color: white;
+  min-height: 100vh; /* Ensure full height */
+}
+
